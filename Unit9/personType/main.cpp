@@ -33,7 +33,5 @@ int main()
   professor1.set_firstName(fName);
   professor1.set_lastName(lName);
   professor1.print();
-
-
-
+  
 }
