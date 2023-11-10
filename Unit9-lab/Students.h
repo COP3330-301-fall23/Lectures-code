@@ -4,14 +4,16 @@ using namespace std;
 class Students
 {
     private:
-        string name[6];
-        double grades[6][3];
-        int size_array;
+        string* name;
+        double **grades;
+        int num_of_stud;
+        int num_of_test;
 
     public:
-    Students(){};
-    Students(ifstream &InputFile, string file_name);
-    ~Students(){};
+        Students(const Students& object); //Copy constructor
+        Students(){}; //Default Contructor
+        Students(ifstream &InputFile, string file_name, int num_test, int array_size); //overload contstructor
+        ~Students(); //Destructor
     void compute_all_final_grade(string name_OutputFile);
     void find_student(ifstream &InputFile, string file_name);
     // void compute_final_grade(ifstream &InputFile, string file_name);   
